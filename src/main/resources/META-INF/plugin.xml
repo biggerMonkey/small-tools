@@ -1,0 +1,59 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>person.hwj.small-tools</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Small-Tools</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="test@qq.com" url="https://www.yourcompany.com">hwj</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        small tools collection
+        1.bean converter
+        2.translation
+    </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+<!--        <action id="BeanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverter" text="BeanConverter"-->
+<!--                description="BeanConverter">-->
+<!--            <add-to-group group-id="ToolsMenu" anchor="last"/>-->
+<!--        </action>-->
+<!--        JavaGenerateGroup1-->
+
+
+        <!--二级菜单-->
+        <group id="SmallTools" text="Small Tools" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="beanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverter"
+                    text="BeanConverter"
+                    description="Generates method for converting the instance of one class">
+<!--                <add-to-group group-id="SmallTools" anchor="after"-->
+<!--                              relative-to-action="Actions.ActionsPlugin.GenerateToString" />-->
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G" />
+            </action>
+            <action id="translate" class="pers.hwj.small.tools.translate.TranslateAction"
+                    text="Translate" >
+<!--                <add-to-group group-id="SmallTools" anchor="after"-->
+<!--                              relative-to-action="Actions.ActionsPlugin.GenerateToString" />-->
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt A" />
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
