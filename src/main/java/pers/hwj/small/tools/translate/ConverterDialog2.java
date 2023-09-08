@@ -47,7 +47,7 @@ public class ConverterDialog2 extends DialogWrapper {
         this.psiClass = psiClass;
         this.dialog = createConverterDialog();
         List<String> classNamesForAutocompletion = getClassNamesForAutocompletion();
-        GridLayout gridLayout = new GridLayout(4,4,3,3);
+
         this.inheritFields = new JCheckBox("Use inherited fields");
         if (from) {
             this.fromField = createTextField(classNamesForAutocompletion);
