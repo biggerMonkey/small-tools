@@ -11,7 +11,7 @@ import com.intellij.psi.PsiMethod;
 import com.intellij.psi.codeStyle.JavaCodeStyleManager;
 import pers.hwj.small.tools.beanConverter.utils.ProjectUtil;
 
-public class BeanConverter extends AnAction {
+public class BeanConverterAction extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {

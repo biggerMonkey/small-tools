@@ -31,7 +31,7 @@
 
     </extensions>
     <actions>
-<!--        <action id="BeanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverter" text="BeanConverter"-->
+<!--        <action id="BeanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverterAction" text="BeanConverter"-->
 <!--                description="BeanConverter">-->
 <!--            <add-to-group group-id="ToolsMenu" anchor="last"/>-->
 <!--        </action>-->
@@ -41,11 +41,9 @@
         <!--二级菜单-->
         <group id="SmallTools" text="Small Tools" popup="true">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action id="beanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverter"
+            <action id="beanConverter" class="pers.hwj.small.tools.beanConverter.BeanConverterAction"
                     text="BeanConverter"
                     description="Generates method for converting the instance of one class">
-<!--                <add-to-group group-id="SmallTools" anchor="after"-->
-<!--                              relative-to-action="Actions.ActionsPlugin.GenerateToString" />-->
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G" />
             </action>
             <action id="translate" class="pers.hwj.small.tools.translate.TranslateAction"
@@ -53,6 +51,10 @@
 <!--                <add-to-group group-id="SmallTools" anchor="after"-->
 <!--                              relative-to-action="Actions.ActionsPlugin.GenerateToString" />-->
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt A" />
+            </action>
+            <action id="timestampConverter" class="pers.hwj.small.tools.timestamp.TimestampConverterAction"
+                    text="Timestamp" >
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt B" />
             </action>
         </group>
     </actions>
