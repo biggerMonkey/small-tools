@@ -56,6 +56,10 @@
                     text="Timestamp" >
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt B" />
             </action>
+            <action id="charConverterAction" class="pers.hwj.small.tools.charConverter.CharConverterAction"
+                    text="CharConverter" >
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M" />
+            </action>
         </group>
     </actions>
 </idea-plugin>
