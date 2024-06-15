@@ -1,7 +1,5 @@
 package pers.hwj.small.tools.charConverter;
 
-import org.apache.commons.lang3.StringUtils;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,6 +1,6 @@
 package pers.hwj.small.tools.charConverter;
 
-import org.apache.commons.lang3.StringUtils;
+import pers.hwj.small.tools.common.StringUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
